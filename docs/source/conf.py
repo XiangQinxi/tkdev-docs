@@ -1,35 +1,62 @@
 # Configuration file for the Sphinx documentation builder.
+#
+# For the full list of built-in configuration values, see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Project information
+# -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'tkdev-course'
+copyright = '2022, XiangQinxi'
+author = 'XiangQinxi'
+version = '3.0.0'
+release = '2.5.2'
 
-release = '0.1'
-version = '0.1.0'
+# -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# -- General configuration
+togglebutton_hint = "展示隐藏内容"
 
 extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
+    "sphinx_copybutton",
+    "myst_parser",
+    "sphinxcontrib.mermaid",
+    "sphinx_markdown_tables",
+    "sphinx_inline_tabs",
+    "sphinx_design",
+    "sphinxext.opengraph",
+    "sphinx_togglebutton",
 ]
+myst_enable_extensions = ["colon_fence"]
 
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+templates_path = ["_templates"]
+html_additional_pages = {
+    "index": "index.html",
 }
-intersphinx_disabled_domains = ['std']
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 templates_path = ['_templates']
+exclude_patterns = []
 
-# -- Options for HTML output
+language = 'zh_CN'
 
-html_theme = 'sphinx_rtd_theme'
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# -- Options for EPUB output
-epub_show_urls = 'footnote'
+html_title = "tkinterDev"
+html_theme = "furo"
+html_static_path = ['_static']
+html_theme_options = {
+    "navigation_with_keys": True,
+}
+html_theme_options = {
+    "source_repository": "https://github.com/XiangQinxi/tkinterDev-Docs/",
+    "source_branch": "main",
+    "source_directory": "docs/",
+}
+# html_static_path = ["_static"]
+# html_theme_options = { "light_logo": "logo-light-mode.png", "dark_logo": "logo-dark-mode.png"}
