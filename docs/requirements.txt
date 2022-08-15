@@ -6,4 +6,4 @@ sphinxcontrib-mermaid==0.7.1
 sphinx-inline-tabs==2022.1.2b11
 sphinx-design==0.2.0
 sphinxext-opengraph==0.6.3
-sphinx-togglebutton=0.3.2
+sphinx-togglebutton==0.3.2
